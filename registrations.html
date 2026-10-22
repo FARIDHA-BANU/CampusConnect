@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Registrations | CampusConnect</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="navbar">
+        <a href="index.html" class="brand"><span class="brand-icon">✦</span> CampusConnect</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button>
+        <nav class="nav-links" id="navLinks">
+            <a href="index.html">Home</a><a href="events.html">Explore Events</a>
+            <a href="registrations.html">My Registrations</a><a href="admin.html">Admin</a>
+        </nav>
+        <a href="events.html" class="btn btn-primary nav-cta">Find Events ↗</a>
+    </header>
+
+    <main class="section content-section">
+        <div class="section-heading">
+            <div><span class="eyebrow">YOUR CAMPUS JOURNEY</span><h2>My Registrations</h2><p>Keep track of the events you have joined.</p></div>
+            <span class="result-count" id="myRegistrationCount">0 registrations</span>
+        </div>
+
+        <div class="registration-summary">
+            <div><span>📝</span><strong id="myTotal">0</strong><small>Total Registered</small></div>
+            <div><span>🗓️</span><strong id="myUpcoming">0</strong><small>Upcoming Events</small></div>
+        </div>
+
+        <div class="my-registration-list" id="myRegistrationList"></div>
+        <div class="empty-state" id="emptyRegistrations">
+            <span>🎟️</span><h3>Your campus adventure awaits!</h3>
+            <p>You haven't registered for any events yet.</p>
+            <a href="events.html" class="btn btn-primary">Explore Events →</a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <a href="index.html" class="brand footer-brand">✦ CampusConnect</a>
+        <p class="copyright">© <span id="currentYear"></span> CampusConnect</p>
+    </footer>
+
+    <script src="js/events.js"></script>
+    <script src="js/registration.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Details | CampusConnect</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="navbar">
+        <a href="index.html" class="brand"><span class="brand-icon">✦</span> CampusConnect</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button>
+        <nav class="nav-links" id="navLinks">
+            <a href="index.html">Home</a><a href="events.html">Explore Events</a>
+            <a href="registrations.html">My Registrations</a><a href="admin.html">Admin</a>
+        </nav>
+        <a href="events.html" class="btn btn-primary nav-cta">All Events ↗</a>
+    </header>
+
+    <main class="section content-section">
+        <div class="section-heading">
+            <div><span class="eyebrow">KNOW BEFORE YOU GO</span><h2>Event Details</h2><p>Find out more about your selected campus event.</p></div>
+        </div>
+
+        <div class="details-panel" id="eventDetailsPanel">
+            <div class="details-placeholder"><span>📌</span><h3>Loading event details...</h3></div>
+        </div>
+
+        <p style="margin-top:20px"><a href="events.html" class="btn btn-outline">← Back to All Events</a></p>
+    </main>
+
+    <footer class="footer">
+        <a href="index.html" class="brand footer-brand">✦ CampusConnect</a>
+        <p class="copyright">© <span id="currentYear"></span> CampusConnect</p>
+    </footer>
+    <div id="toast" class="toast" role="status"></div>
+
+    <script src="js/events.js"></script>
+    <script src="js/registration.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

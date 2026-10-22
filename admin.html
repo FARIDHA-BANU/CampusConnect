@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | CampusConnect</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="navbar">
+        <a href="index.html" class="brand"><span class="brand-icon">✦</span> CampusConnect</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button>
+        <nav class="nav-links" id="navLinks">
+            <a href="index.html">Home</a><a href="events.html">Explore Events</a>
+            <a href="registrations.html">My Registrations</a><a href="admin.html">Admin</a>
+        </nav>
+        <a href="events.html" class="btn btn-primary nav-cta">View Website ↗</a>
+    </header>
+
+    <main class="section content-section">
+        <div class="section-heading">
+            <div><span class="eyebrow">EVENT ORGANIZER</span><h2>Admin Dashboard</h2><p>Manage campus events and monitor student participation.</p></div>
+        </div>
+
+        <div class="admin-notice">
+            <strong>Demo mode:</strong> This dashboard has no secure administrator login.
+            Do not use it to manage real student data.
+        </div>
+
+        <div class="admin-stats">
+            <div class="admin-stat"><span>Total Events</span><strong id="adminTotalEvents">0</strong></div>
+            <div class="admin-stat"><span>Total Registrations</span><strong id="adminTotalRegistrations">0</strong></div>
+            <div class="admin-stat"><span>Event Categories</span><strong id="adminCategories">0</strong></div>
+        </div>
+
+        <div class="admin-layout">
+            <form id="addEventForm" class="form-card">
+                <h3 id="adminFormTitle">Add New Event</h3>
+
+                <label for="newEventName">Event Name *</label>
+                <input id="newEventName" required placeholder="Enter event name">
+
+                <label for="newEventCategory">Category *</label>
+                <select id="newEventCategory" required>
+                    <option value="">Choose category</option>
+                    <option>Technical</option><option>Cultural</option>
+                    <option>Sports</option><option>Workshop</option>
+                </select>
+
+                <label for="newEventDate">Date *</label>
+                <input type="date" id="newEventDate" required>
+
+                <label for="newEventTime">Time *</label>
+                <input id="newEventTime" required placeholder="10:00 AM - 1:00 PM">
+
+                <label for="newEventVenue">Venue *</label>
+                <input id="newEventVenue" required placeholder="Main Auditorium">
+
+                <label for="newEventImage">Image URL (optional)</label>
+                <input type="url" id="newEventImage" placeholder="https://...">
+
+                <label for="newEventDescription">Description *</label>
+                <textarea id="newEventDescription" rows="4" required placeholder="Describe the event"></textarea>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary" id="saveEventButton">Add Event</button>
+                    <button type="button" class="btn btn-outline hidden" id="cancelEditButton">Cancel</button>
+                </div>
+                <p id="adminMessage" class="form-message" role="status"></p>
+            </form>
+
+            <div class="admin-table-card">
+                <div class="table-heading">
+                    <h3>Manage Events</h3>
+                    <button id="exportRegistrations" class="btn btn-outline" type="button">Export Registrations CSV</button>
+                </div>
+                <div class="table-scroll">
+                    <table>
+                        <thead><tr><th>Event</th><th>Date</th><th>Registrations</th><th>Actions</th></tr></thead>
+                        <tbody id="adminEventTable"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <a href="index.html" class="brand footer-brand">✦ CampusConnect</a>
+        <p class="copyright">© <span id="currentYear"></span> CampusConnect</p>
+    </footer>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <script src="js/events.js"></script>
+    <script src="js/registration.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
